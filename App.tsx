@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import LogoGrid from './components/LogoGrid';
 import SchoolPage from './components/SchoolPage';
@@ -20,7 +19,7 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-gray-900 text-white font-sans">
       <header className="py-6 text-center">
          <div className="flex justify-center items-center gap-4">
-            <img src={ASSOCIATION_DATA.logoUrl} alt="Association Logo" className="h-16 w-16" />
+            <img src={ASSOCIATION_DATA.logoUrl} alt="Association Logo" className="h-14 w-14 border-2 border-gray-700 rounded-md" />
             <div>
               <h1 className="text-4xl font-bold text-yellow-400 tracking-wider" style={{ fontFamily: 'serif' }}>
                   {ASSOCIATION_DATA.name}
