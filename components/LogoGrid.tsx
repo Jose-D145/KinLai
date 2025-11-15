@@ -1,4 +1,3 @@
-
 import React, { useMemo } from 'react';
 import type { School, GridItemType } from '../types';
 import { ASSOCIATION_DATA } from '../constants';
@@ -13,11 +12,11 @@ const GridCell: React.FC<{ item: GridItemType; onSelect: (school: School) => voi
     if (item.type === 'association') {
       return (
         <div className="flex items-center justify-center aspect-square bg-gray-800 rounded-lg border border-gray-700">
-          <img src={ASSOCIATION_DATA.logoUrl} alt="Association Logo" className="object-cover w-full h-full rounded-lg" />
+          <img src={ASSOCIATION_DATA.logoUrl} alt="Logo da Associação" className="object-cover w-full h-full rounded-lg" />
         </div>
       );
     }
-    // Empty cell - this will now be filled by 'association' type, but leaving as a fallback.
+    // Empty cell
     return <div className="aspect-square"></div>;
   }
 
@@ -30,7 +29,7 @@ const GridCell: React.FC<{ item: GridItemType; onSelect: (school: School) => voi
     >
       <img
         src={school.logoUrl}
-        alt={`${school.name} Logo`}
+        alt={`Logo de ${school.name}`}
         title={school.name}
         className="object-cover w-full h-full rounded-lg transition-transform duration-300 group-hover:scale-110"
       />
@@ -43,18 +42,20 @@ const LogoGrid: React.FC<LogoGridProps> = ({ schools, onSchoolSelect }) => {
   
   const gridItems = useMemo<GridItemType[]>(() => {
     const items: GridItemType[] = [];
-    const schoolItems = [...schools]; // Make a mutable copy
+    const schoolItems = [...schools];
     const gridSize = 25;
     const centerIndex = 12;
 
     for (let i = 0; i < gridSize; i++) {
         if (i === centerIndex) {
             items.push({ type: 'association' });
-        } else if (schoolItems.length > 0) {
-            items.push(schoolItems.shift()!); // Take the next school from the copy
         } else {
-            // If no more schools, push a non-interactive association item
-            items.push({ type: 'association' });
+            const school = schoolItems.shift();
+            if (school) {
+                items.push(school);
+            } else {
+                items.push({ type: 'empty' }); // Add empty cells if schools run out
+            }
         }
     }
     return items;
@@ -62,8 +63,8 @@ const LogoGrid: React.FC<LogoGridProps> = ({ schools, onSchoolSelect }) => {
 
   return (
     <div className="flex flex-col items-center">
-      <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-gray-200">Select a School</h2>
-      <p className="text-gray-400 mb-8 max-w-2xl text-center">Click on a school's logo to view its class schedule and information. The central emblem represents the international association.</p>
+      <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-gray-200">Selecione uma Escola</h2>
+      <p className="text-gray-400 mb-8 max-w-2xl text-center">Clique no logo de uma escola para ver os horários de aulas e informações. O emblema central representa a associação internacional.</p>
       <div className="grid grid-cols-5 gap-4 md:gap-6 w-full max-w-4xl mx-auto">
         {gridItems.map((item, index) => (
           <GridCell key={('id' in item) ? item.id : `cell-${index}`} item={item} onSelect={onSchoolSelect} />

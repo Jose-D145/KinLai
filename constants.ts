@@ -35,3 +35,4 @@ export const schools: School[] = [
   { id: 23, name: "Academia de Kung Fu Garra de Águia", logoUrl: ASSOCIATION_LOGO},
   { id: 24, name: "Templo Lohan de Kung Fu", logoUrl: ASSOCIATION_LOGO},
 ];
+

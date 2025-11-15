@@ -1,5 +1,5 @@
 {
-  "name": "Kung Fu School Alliance",
-  "description": "An application for managing classes across an international association of Kung Fu schools, featuring a central dashboard to access each school's portal.",
+  "name": "Aliança de Escolas de Kung Fu",
+  "description": "Uma aplicação para gerenciar aulas em uma associação internacional de escolas de Kung Fu, com um painel central para acessar o portal de cada escola.",
   "requestFramePermissions": []
 }

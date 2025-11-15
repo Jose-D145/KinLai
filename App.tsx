@@ -19,12 +19,12 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-gray-900 text-white font-sans">
       <header className="py-6 text-center">
          <div className="flex justify-center items-center gap-4">
-            <img src={ASSOCIATION_DATA.logoUrl} alt="Association Logo" className="h-14 w-14 border-2 border-gray-700 rounded-md" />
+            <img src={ASSOCIATION_DATA.logoUrl} alt="Logo da Associação" className="h-14 w-14 border-2 border-gray-700 rounded-md" />
             <div>
               <h1 className="text-4xl font-bold text-yellow-400 tracking-wider" style={{ fontFamily: 'serif' }}>
                   {ASSOCIATION_DATA.name}
               </h1>
-              <p className="text-gray-400">School Management Portal</p>
+              <p className="text-gray-400">Portal de Gerenciamento das Escolas</p>
             </div>
          </div>
       </header>
@@ -36,7 +36,7 @@ const App: React.FC = () => {
         )}
       </main>
       <footer className="text-center py-4 text-gray-500 text-sm">
-        <p>&copy; 2024 International Traditional Kung Fu Association. All rights reserved.</p>
+        <p>&copy; 2024 {ASSOCIATION_DATA.name}. Todos os direitos reservados.</p>
       </footer>
     </div>
   );

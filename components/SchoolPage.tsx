@@ -1,4 +1,3 @@
-
 import React from 'react';
 import type { School } from '../types';
 
@@ -14,14 +13,14 @@ const SchoolPage: React.FC<SchoolPageProps> = ({ school, onBack }) => {
         <div className="flex flex-col md:flex-row items-center gap-8">
             <img 
                 src={school.logoUrl} 
-                alt={`${school.name} Logo`} 
+                alt={`Logo de ${school.name}`}
                 className="w-48 h-48 rounded-full border-4 border-yellow-400 object-cover shadow-lg"
             />
             <div className="text-center md:text-left">
                 <h2 className="text-4xl font-bold text-yellow-400">{school.name}</h2>
-                <p className="text-gray-300 mt-2 text-lg">Class Management Portal</p>
+                <p className="text-gray-300 mt-2 text-lg">Portal de Gerenciamento de Aulas</p>
                 <p className="text-gray-400 mt-4">
-                    Welcome to the portal for {school.name}. Here you can manage class schedules, student attendance, and view announcements. This section is currently under development.
+                    Bem-vindo ao portal de {school.name}. Aqui você pode gerenciar os horários das aulas, a frequência dos alunos e ver os avisos. Esta seção está atualmente em desenvolvimento.
                 </p>
             </div>
         </div>
@@ -34,7 +33,7 @@ const SchoolPage: React.FC<SchoolPageProps> = ({ school, onBack }) => {
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
           <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
         </svg>
-        Back to Schools
+        Voltar para a Grade
       </button>
     </div>
   );
