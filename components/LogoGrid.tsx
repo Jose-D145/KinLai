@@ -49,7 +49,7 @@ const LogoGrid: React.FC<LogoGridProps> = ({ schools, onSchoolSelect }) => {
   return (
     <div className="flex flex-col items-center">
       <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-gray-200">Selecione uma Escola</h2>
-      <p className="text-gray-400 mb-8 max-w-2xl text-center">Navegue pela nossa grade de 21 escolas afiliadas. Clique em qualquer logo para acessar o portal da escola.</p>
+      <p className="text-gray-400 mb-8 max-w-2xl text-center">Selecione a escola para acessar seu portal de serviços.</p>
       
       {/* Container for the grid and the watermark */}
       <div className="relative w-full max-w-5xl mx-auto">
@@ -58,7 +58,7 @@ const LogoGrid: React.FC<LogoGridProps> = ({ schools, onSchoolSelect }) => {
           src={ASSOCIATION_DATA.logoUrl} 
           alt="" 
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-contain opacity-5 z-0 p-16 pointer-events-none"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-contain opacity-50 pointer-events-none scale-125"
         />
 
         {/* The actual grid */}
