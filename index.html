@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITKFA - Portal de Gestão</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+      /* Regras CSS de contenção MÁXIMA */
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-color: #111827;
+        overflow-x: hidden; /* Mantém a solução contra rolagem horizontal */
+      }
+      #root {
+        height: 100%;
+      }
+    </style>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/"
+      }
+    }
+    </script>
+  </head>
+  <body class="h-full bg-gray-900">
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script> 
+  </body>
+</html>

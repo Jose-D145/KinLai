@@ -1,0 +1,3 @@
+Arquivo,          Função
+services/api.js   Armazena o axios e o Token.
+pages/Login.jsx   Componente para capturar credenciais.

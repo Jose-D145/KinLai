@@ -1,0 +1,5 @@
+{
+  "name": "Kung Fu School Alliance",
+  "description": "An application for managing classes across an international association of Kung Fu schools, featuring a central dashboard to access each school's portal.",
+  "requestFramePermissions": []
+}

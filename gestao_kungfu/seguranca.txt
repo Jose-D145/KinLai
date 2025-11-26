@@ -1,0 +1,5 @@
+# Funcionalidade,Modelo Padrão do Django,Onde é Usado
+#
+# Usuários,User (django.contrib.auth),"Login, autenticação de API."
+#Grupos,Group (django.contrib.auth),"Permissões por função (ex: Administrador, Mestre, Secretária)."
+#Permissões,Permission (django.contrib.auth),Define o que um usuário/grupo pode fazer (ex: pode_adicionar_aluno).
